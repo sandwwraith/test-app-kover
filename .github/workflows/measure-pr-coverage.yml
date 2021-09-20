@@ -21,5 +21,5 @@ jobs:
         id: jacoco
         uses: madrapps/jacoco-report@v1.2
         with:
-          path: ${{ github.workspace }}/build/reports/kover/jvmTest.xml
+          paths: ${{ github.workspace }}/build/reports/kover/jvmTest.xml
           token: ${{ secrets.GITHUB_TOKEN }}
