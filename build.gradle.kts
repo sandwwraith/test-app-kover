@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.5.30"
     application
 //    jacoco
-    id("kotlinx-kover") version "0.1.0"
+    id("kotlinx-kover") version "0.2.2"
 }
 
 group = "kotlinx"
@@ -41,7 +41,7 @@ tasks.test {
 
 
 kover {
-    intellijAgentVersion.set("1.0.597")
+//    intellijAgentVersion.set("1.0.597")
 
     jacocoAgentVersion.set("0.8.7")
 }
