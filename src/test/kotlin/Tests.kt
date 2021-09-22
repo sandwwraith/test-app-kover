@@ -14,4 +14,10 @@ class Tests {
         val m = Main()
         assert(m.helloWorld().contains("world"))
     }
+
+    @Test
+    fun testGoodbye() {
+        val m = Main()
+        assert(m.goodbye(m.world()).contains("Goodbye"))
+    }
 }

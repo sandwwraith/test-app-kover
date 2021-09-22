@@ -6,4 +6,6 @@ class Main {
     fun greet(s: String) = "Hello $s!"
 
     inline fun world() = "world"
+
+    fun goodbye(s: String) = "Goodbye, $s!"
 }
