@@ -3,8 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.5.30"
     application
-    jacoco
-    id("kotlinx-kover") version "0.1.0"
+    id("kotlinx-kover") version "0.2.2"
 }
 
 group = "kotlinx"
@@ -33,28 +32,11 @@ application {
 tasks.test {
     extensions.configure(kotlinx.kover.KoverTaskExtension::class) {
         useJacoco = false
-//        useJacoco = false // false by default
-//        xmlReportFile.set(file("$buildDir/custom/report.xml"))
         includes += "kotlinx\\.testapp\\..*"
     }
 }
 
 
 kover {
-    intellijAgentVersion.set("1.0.597")
-
     jacocoAgentVersion.set("0.8.7")
 }
-
-jacoco {
-//    toolVersion = "0.8.7"
-}
-
-// Configurable per-task
-//tasks.test {
-//    extensions.configure(kotlinx.kover.KoverTaskExtension::class) {
-//        useJacoco = true
-////        xmlReportFile.set(file("$buildDir/custom/report.xml"))
-//        includes += "kotlinx\\.testapp\\..*"
-//    }
-//}
