@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.5.30"
     application
-    jacoco
+//    jacoco
     id("kotlinx-kover") version "0.1.0"
 }
 
@@ -46,9 +46,9 @@ kover {
     jacocoAgentVersion.set("0.8.7")
 }
 
-jacoco {
+//jacoco {
 //    toolVersion = "0.8.7"
-}
+//}
 
 // Configurable per-task
 //tasks.test {
